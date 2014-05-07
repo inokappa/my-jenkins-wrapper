@@ -26,6 +26,11 @@ jenkins_notification(){
   fi
   rm ${TEMP}
   rm ${LOG}
+  if [ ${RESULT} = "0" ];then
+    echo ""
+  else
+    exit 1
+  fi
 }
 #
 start_time(){
